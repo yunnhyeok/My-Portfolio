@@ -1,0 +1,97 @@
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background-color: #e9e9e9;
+    }
+
+    /*자기소개 버튼들*/
+    .buttons {
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        display: flex;
+        gap: 30px;
+    }
+    
+    /* 버튼 스타일 */
+    .buttons button {
+        padding: 10px 10px 10px 10px;
+        font-size: 1em;
+        color: #000;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        background-color: transparent;
+        position: relative; /* 체크 표시를 나타낼 위치 지정 */
+    }
+    
+    /* 버튼 호버 시 체크표시 애니메이션 추가 */
+    .buttons button:hover::after {
+        content: '✔'; /* 체크 표시 */
+        position: absolute;
+        top: -40%;
+        left: 30%; /* 버튼의 오른쪽보다 더 멀어지도록 설정 */
+        transform: translateY(-50%) scale(0);
+        font-size: 1.5rem;
+        color: #000;
+        opacity: 1;
+        animation: checkmark-animate 0.1s ease-out forwards;
+    }
+    
+    /* 체크표시 애니메이션 */
+    @keyframes checkmark-animate {
+        0% {
+            opacity: 0;
+            transform: translateY(-50%) scale(0);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(-50%) scale(1);
+        }
+    }
+    
+    .buttons .bar {
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        margin-top: 5px;
+    }
+
+
+.container {
+    margin-top: 55px;
+    padding: 20px;
+    background: transparent;
+    text-align: center;
+  }
+
+.Main-Introduction{
+    font-family: 'Paperlogy-8ExtraBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+p {
+    opacity: 1;
+    transform: translateY(10px) translateZ(0px);
+    font-size: 1.25rem;
+    line-height: 0.35rem;
+    --tw-text-opacity: 1;
+    color: rgb(35 35 35 / var(--tw-text-opacity));
+    font-weight: 400;
+    white-space: pre-wrap;
+  }
+
+.highlight {
+    font-weight: bold;
+    color: #000;
+  }
