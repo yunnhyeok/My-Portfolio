@@ -7,56 +7,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hyeok Portfolio</title>
     <link rel="stylesheet" href="Portfolio.css" />
+    <script src="Portfolio.js"></script>
+
+    <!-- AOS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css"
     />
-    <script src="Portfolio.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
   </head>
   <body>
     <div id="fullpage">
       <div class="section" id="section1">
-        <div class="buttons">
-          <div class="button-container">
-            <button onclick="window.open('https://github.com/yunnhyeok')">
-              GitHub
-            </button>
-            <div class="bar"></div>
-          </div>
-          <div class="button-container">
-            <button
-              onclick="window.open('https://convergenceproject7.tistory.com/')"
-            >
-              Vlog
-            </button>
-            <div class="bar"></div>
+        <div data-aos="fade-up" style="position: relative; z-index: 1000">
+          <div class="buttons">
+            <div class="button-container">
+              <button onclick="window.open('https://github.com/yunnhyeok')">
+                GitHub
+              </button>
+              <div class="bar"></div>
+            </div>
+            <div class="button-container">
+              <button
+                onclick="window.open('https://convergenceproject7.tistory.com/')"
+              >
+                Vlog
+              </button>
+              <div class="bar"></div>
+            </div>
           </div>
         </div>
         <div class="container">
-          <h2 class="Main-Introduction">
-            배움을 나누며 성장을 즐기는 프론트엔드 개발자,
-            <span class="highlight">윤혁</span>입니다!
-          </h2>
-          <p>
-            <span class="highlight">긍정적인 사고</span>를 바탕으로 적극적인
-            소통 능력을 통해 원활한 협업을 이끌어냅니다.
-          </p>
-          <p>
-            <span class="highlight">창의적인 문제 해결 능력</span>으로
-            프로젝트의 난관을 효과적으로 극복합니다.
-          </p>
-          <p>
-            협업 속에서 <span class="highlight">의견을 조율</span>하고 기술적인
-            문제를 해결하는 데 강점을 보입니다.
-          </p>
+          <div data-aos="zoom-in" data-aos-delay="300">
+            <div class="first-container">
+              <h2 class="Main-Introduction">
+                배움을 나누며 성장을 즐기는 프론트엔드 개발자,
+                <span class="highlight">윤혁</span>입니다!
+              </h2>
+            </div>
+          </div>
         </div>
       </div>
       <div class="section" id="section2">
-        <div class="container">
-          <h2 class="Main-Introduction">
-            배움을 나누며 성장을 즐기는 프론트엔드 개발자,
-            <span class="highlight">윤혁</span>입니다!
-          </h2>
+        <div class="second-container">
           <p>
             <span class="highlight">긍정적인 사고</span>를 바탕으로 적극적인
             소통 능력을 통해 원활한 협업을 이끌어냅니다.
@@ -71,17 +71,24 @@
           </p>
         </div>
       </div>
-      <div class="section" id="section3">세 번째 섹션</div>
-      <div class="section" id="section4">네 번째 섹션</div>
     </div>
-    <!--FULLPAGE 를 위해 /BODY로 닫기전에 넣어야하는 함수-->
+    <!--AOS 사용을 위한 스크립트 -->
+    <script>
+      AOS.init({
+        duration: 1000, // 애니메이션 지속 시간 (ms)
+        once: true, // 한 번만 애니메이션 실행
+        offset: 100, // 시작 지점 (px 단위)
+      });
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
     <script>
       new fullpage("#fullpage", {
-        autoScrolling: true,
-        navigation: true,
-        anchors: ["section1", "section2", "section3", "section4"],
-        scrollOverflow: true, // 콘텐츠가 넘칠 경우 스크롤 가능
+        autoScrolling: true, // 자동 스크롤 활성화
+        navigation: true, // 우측 내비게이션 표시
+        navigationPosition: "right",
+        scrollingSpeed: 700, // 스크롤 속도 설정
+        anchors: ["section1", "section2"],
+        menu: "#menu",
       });
     </script>
   </body>
