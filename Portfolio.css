@@ -1,15 +1,15 @@
 body {
   margin: 0;
+  padding: 0;
   color: #333;
-  display: flex;
-  justify-content: center;
   background-color: #e9e9e9;
 }
 
 /*자기소개 버튼들*/
 .buttons {
   position: absolute;
-  top: 40px;
+  left: 5em;
+  top: 3em;
   display: flex;
   gap: 30px;
   z-index: 1000;
@@ -59,18 +59,24 @@ body {
   margin-top: 5px;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+}
+
 .first-container {
   margin-top: 9em;
   padding: 20px;
   background: transparent;
-  text-align: center;
 }
 
 .second-container {
-  margin-top: 9em;
+  display: flex;
+  margin-top: 2em;
   padding: 20px;
   background: transparent;
   text-align: center;
+  flex-direction: column;
 }
 
 .Main-Introduction {
@@ -81,10 +87,37 @@ body {
   line-height: 1;
 }
 
+/*이미지와 내 메리트*/
+.image-merit {
+  display: flex;
+}
+
+/*내 사진 이미지*/
+.text-with-image {
+  margin-left: 2em;
+  margin-top: 2em;
+  gap: 20px; /* 이미지와 텍스트 간격 조절 */
+}
+
+.text-with-image img {
+  width: 200px; /* 이미지 크기 조절 */
+  height: auto;
+}
+
+.text-with-image p {
+  margin: 0;
+  font-size: 18px;
+}
+
+/*내 메리트*/
+.merit {
+  margin-left: 5em;
+}
+
 p {
   opacity: 1;
   transform: translateY(10px) translateZ(0px);
-  font-size: 1.25rem;
+  font-size: 1.75em;
   color: rgb(35 35 35 / var(--tw-text-opacity));
   font-weight: 400;
 }
@@ -94,13 +127,43 @@ p {
   color: #000;
 }
 
+/*개인정보*/
+.Personal-information {
+  display: flex;
+  text-align: left;
+  margin-top: 2.7em;
+}
+
+.information-p {
+  font-size: 1.25em;
+}
+
+/*내 정보*/
+.My-information {
+  margin-left: 2em;
+}
+
+/*자격증*/
+.LICENSE {
+  margin-left: 4em;
+}
+
+.EDUCATION {
+  margin-left: 4em;
+}
+
 /* fullpage 스타일*/
 .section {
   height: 100vh; /* 전체 높이 설정 */
   overflow: auto;
 }
 
+/*AOS 스타일*/
 [data-aos] {
   pointer-events: all; /* 클릭 이벤트 활성화 */
   z-index: 10; /* 버튼이 다른 요소보다 위에 위치하도록 조정 */
+}
+
+.aos-section {
+  text-align: center;
 }

@@ -9,6 +9,18 @@
     <link rel="stylesheet" href="Portfolio.css" />
     <script src="Portfolio.js"></script>
 
+    <!-- FullPage.js CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.css"
+    />
+
+    <!-- jQuery 라이브러리 (2.9.7 버전은 jQuery 필요) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- FullPage.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>
+
     <!-- AOS CSS -->
     <link
       rel="stylesheet"
@@ -16,36 +28,30 @@
     />
     <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
   </head>
   <body>
     <div id="fullpage">
-      <div class="section" id="section1">
-        <div data-aos="fade-up" style="position: relative; z-index: 1000">
-          <div class="buttons">
-            <div class="button-container">
-              <button onclick="window.open('https://github.com/yunnhyeok')">
-                GitHub
-              </button>
-              <div class="bar"></div>
-            </div>
-            <div class="button-container">
-              <button
-                onclick="window.open('https://convergenceproject7.tistory.com/')"
-              >
-                Vlog
-              </button>
-              <div class="bar"></div>
-            </div>
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="buttons">
+          <div class="button-container">
+            <button onclick="window.open('https://github.com/yunnhyeok')">
+              GitHub
+            </button>
+            <div class="bar"></div>
+          </div>
+          <div class="button-container">
+            <button
+              onclick="window.open('https://convergenceproject7.tistory.com/')"
+            >
+              Vlog
+            </button>
+            <div class="bar"></div>
           </div>
         </div>
-        <div class="container">
-          <div data-aos="zoom-in" data-aos-delay="300">
+      </div>
+      <div class="container">
+        <div class="section" id="section1">
+          <div data-aos="zoom-in">
             <div class="first-container">
               <h2 class="Main-Introduction">
                 배움을 나누며 성장을 즐기는 프론트엔드 개발자,
@@ -55,40 +61,94 @@
           </div>
         </div>
       </div>
+      <!--섹션2-->
       <div class="section" id="section2">
+        <!--2번째 컨테이너-->
         <div class="second-container">
-          <p>
-            <span class="highlight">긍정적인 사고</span>를 바탕으로 적극적인
-            소통 능력을 통해 원활한 협업을 이끌어냅니다.
-          </p>
-          <p>
-            <span class="highlight">창의적인 문제 해결 능력</span>으로
-            프로젝트의 난관을 효과적으로 극복합니다.
-          </p>
-          <p>
-            협업 속에서 <span class="highlight">의견을 조율</span>하고 기술적인
-            문제를 해결하는 데 강점을 보입니다.
-          </p>
+          <!--이미지 + 메리트-->
+          <div class="image-merit">
+            <!--이미지 div-->
+            <div class="text-with-image">
+              <img
+                src="https://i.postimg.cc/xTsMQRPK/download.png"
+                alt="정장사진"
+              />
+            </div>
+            <div class="merit">
+              <p>
+                <span
+                  class="highlight"
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  >긍정적인 사고</span
+                >를 바탕으로 적극적인 소통 능력을 통해 원활한 협업을
+                이끌어냅니다.
+              </p>
+              <p>
+                <span
+                  class="highlight"
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  >창의적인 문제 해결 능력</span
+                >으로 프로젝트의 난관을 효과적으로 극복합니다.
+              </p>
+              <p>
+                협업 속에서
+                <span
+                  class="highlight"
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                  >의견을 조율</span
+                >하고 기술적인 문제를 해결하는 데 강점을 보입니다.
+              </p>
+            </div>
+          </div>
+          <div class="Personal-information">
+            <div class="My-information">
+              <p class="information-p">BIRTH : 2001. 02. 02</p>
+              <p class="information-p">TEL : 010 - 9442 - 8142</p>
+              <p class="information-p">ADDRESS: 인천광역시 미추홀구 문학동</p>
+              <p class="information-p">EMAIL : kwuds123@naver.com</p>
+            </div>
+            <div class="LICENSE">
+              <p class="information-p">정보처리산업기사 필기 (2024.12 취득)</p>
+            </div>
+            <div class="EDUCATION">
+              <p class="information-p">
+                2020.03~2025.02 부천대학교 컴퓨터소프트웨어과 졸업(전문학사)
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!--AOS 사용을 위한 스크립트 -->
+    <!--FullPage div-->
     <script>
-      AOS.init({
-        duration: 1000, // 애니메이션 지속 시간 (ms)
-        once: true, // 한 번만 애니메이션 실행
-        offset: 100, // 시작 지점 (px 단위)
+      $(document).ready(function () {
+        $("#fullpage").fullpage({
+          autoScrolling: ture, // 자동 스크롤 활성화
+          navigation: true, // 네비게이션 표시
+          anchors: ["section1", "section2", "section3"], // 앵커 설정
+          scrollingSpeed: 700, // 스크롤 속도 (기본: 700ms)
+          controlArrows: ture, // 슬라이드 화살표 비활성화
+          loopBottom: ture, // 마지막 섹션에서 첫 번째 섹션으로 이동 여부
+          loopTop: ture, // 첫 번째 섹션에서 마지막 섹션으로 이동 여부
+          scrollOverflow: true, // 콘텐츠 오버플로우 시 스크롤 가능
+          afterLoad: function (anchorLink, index) {
+            console.log("현재 섹션: " + anchorLink);
+          },
+        });
       });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
+    <!--AOS 사용을 위한 스크립트 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-      new fullpage("#fullpage", {
-        autoScrolling: true, // 자동 스크롤 활성화
-        navigation: true, // 우측 내비게이션 표시
-        navigationPosition: "right",
-        scrollingSpeed: 700, // 스크롤 속도 설정
-        anchors: ["section1", "section2"],
-        menu: "#menu",
+      AOS.init({
+        duration: 1000, // 애니메이션 지속 시간 (1초)
+        once: false, // 여러 번 실행 (false 설정)
+        mirror: true, // 스크롤 올릴 때도 재실행
+        offset: 200, // 요소가 200px 아래에서 애니메이션 시작
+        startEvent: "DOMContentLoaded", // 페이지 로드 시 즉시 실행
       });
     </script>
   </body>
