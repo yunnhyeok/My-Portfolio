@@ -2,13 +2,14 @@ body {
   margin: 0;
   padding: 0;
   color: #333;
-  background-color: #e9e9e9;
+  background-color: #f3f3f3;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 
 /*자기소개 버튼들*/
 .buttons {
   position: absolute;
-  left: 5em;
   top: 3em;
   display: flex;
   gap: 30px;
@@ -70,13 +71,46 @@ body {
   background: transparent;
 }
 
-.second-container {
+/*2번째 컨테이너*/
+.highlight-p {
+  opacity: 1;
+  font-size: 1.25em;
+  color: rgb(35 35 35 / var(--tw-text-opacity));
+  font-weight: 400;
+  margin-bottom: 3em;
+}
+
+.highlight {
+  color: #08a045;
+}
+
+.ABOUT-ME {
   display: flex;
-  margin-top: 2em;
-  padding: 20px;
+}
+
+.ABOUT-ME-01 {
+  color: #08a045;
+  margin-right: 0.45em;
+  font-weight: 300;
+  font-size: 30px;
+  font-family: "Paperlogy-8ExtraBold";
+  font-style: normal;
+  line-height: 1;
+}
+
+.ABOUT-ME-02 {
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.second-container {
   background: transparent;
-  text-align: center;
-  flex-direction: column;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
 }
 
 .Main-Introduction {
@@ -87,20 +121,16 @@ body {
   line-height: 1;
 }
 
-/*이미지와 내 메리트*/
-.image-merit {
-  display: flex;
-}
-
 /*내 사진 이미지*/
 .text-with-image {
-  margin-left: 2em;
+  width: 40%;
+  text-align: center;
   margin-top: 2em;
-  gap: 20px; /* 이미지와 텍스트 간격 조절 */
+  margin-left: 2em;
 }
 
 .text-with-image img {
-  width: 200px; /* 이미지 크기 조절 */
+  max-width: 100%;
   height: auto;
 }
 
@@ -109,29 +139,33 @@ body {
   font-size: 18px;
 }
 
+/*메리트 주제*/
+.merit-title {
+  display: inline;
+  font-weight: bold;
+  color: #08a045;
+}
+
+.bracket {
+  display: inline;
+}
+
 /*내 메리트*/
 .merit {
-  margin-left: 5em;
-}
-
-p {
-  opacity: 1;
-  transform: translateY(10px) translateZ(0px);
-  font-size: 1.75em;
-  color: rgb(35 35 35 / var(--tw-text-opacity));
-  font-weight: 400;
-}
-
-.highlight {
-  font-weight: bold;
-  color: #000;
+  width: 50%;
+  text-align: left;
+  margin-left: 2.5em;
+  margin-top: 2em;
 }
 
 /*개인정보*/
 .Personal-information {
   display: flex;
-  text-align: left;
-  margin-top: 2.7em;
+  justify-content: space-between;
+  font-size: 12px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 30px;
 }
 
 .information-p {
@@ -152,10 +186,17 @@ p {
   margin-left: 4em;
 }
 
+.EDUCATION-p {
+  font-size: 18px;
+}
+
+.EDUCATION-small {
+  font-size: 15px;
+}
+
 /* fullpage 스타일*/
 .section {
   height: 100vh; /* 전체 높이 설정 */
-  overflow: auto;
 }
 
 /*AOS 스타일*/
