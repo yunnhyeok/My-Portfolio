@@ -210,6 +210,24 @@ body {
 }
 
 /*내 스킬 게이지 바*/
+.ABOUT-ME-skill {
+  color: #08a045;
+  margin-left: 8.2em;
+  margin-right: 0.45em;
+  margin-bottom: 2em;
+  font-weight: 300;
+  font-size: 30px;
+  font-family: "Paperlogy-8ExtraBold";
+  font-style: normal;
+  line-height: 1;
+}
+
+.ABOUT-ME-skill-title {
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .skill-container {
   max-width: 700px;
   margin: 0 auto;
