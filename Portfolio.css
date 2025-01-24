@@ -208,3 +208,93 @@ body {
 .aos-section {
   text-align: center;
 }
+
+/*내 스킬 게이지 바*/
+.skill-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.skill-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.skill-tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  transition: 0.3s;
+}
+
+.skill-tab.active {
+  color: #fff;
+  background: #4caf50;
+  border-radius: 10px;
+}
+
+.skill-category {
+  display: none;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.skill-category.active {
+  display: block;
+}
+
+.skill-category-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.skill-item {
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  text-align: right;
+  line-height: 20px;
+  color: white;
+  padding-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.skill-green {
+  background-color: #4caf50;
+}
+.skill-blue {
+  background-color: #2196f3;
+}
+.skill-red {
+  background-color: #f44336;
+}
