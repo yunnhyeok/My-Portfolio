@@ -229,41 +229,53 @@ body {
 }
 
 .skill-container {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.skill-tabs {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+  max-width: 800px;
+  margin: 0 auto;
   background: #fff;
-  padding: 10px 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  overflow: hidden;
+}
+
+/* 세로 탭 스타일 */
+.skill-tabs {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  background: transparent;
+  padding: 10px 0;
 }
 
 .skill-tab {
-  padding: 10px 20px;
+  padding: 15px 20px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  color: #555;
+  color: #fff;
+  background: transparent;
+  border-bottom: 1px solid #555;
+  text-align: center;
   transition: 0.3s;
 }
 
+.skill-tab:last-child {
+  border-bottom: none;
+}
+
+.skill-tab:hover,
 .skill-tab.active {
-  color: #fff;
   background: #4caf50;
-  border-radius: 10px;
+}
+
+/* 스킬 카테고리 스타일 */
+.skill-content {
+  flex: 1;
+  padding: 30px;
 }
 
 .skill-category {
   display: none;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
 }
 
 .skill-category.active {
