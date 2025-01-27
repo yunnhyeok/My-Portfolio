@@ -256,18 +256,31 @@ body {
 }
 
 .skill-tab {
-  padding: 15px 20px;
+  padding: 15px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
-  color: #000000;
+  color: #333;
   background: transparent;
-  text-align: center;
-  transition: 0.3s;
+  text-align: left;
+  transition: color 0.3s ease-in-out, border-left 0.3s ease-in-out 0.3s;
+  /* 글자 색상 먼저, border-left는 0.3초 뒤 적용 */
+  border-left: 5px solid transparent; /* 초기 투명 테두리 */
 }
 
-.skill-tab:last-child {
-  border-bottom: none;
+.skill-tab:hover {
+  background-color: #b6b6b6; /* 마우스 호버 시 효과 */
+}
+
+.skill-tab.active {
+  border-left: 5px solid #2e7d32; /* 진한 초록색 테두리 */
+  color: #2e7d32; /* 진한 초록색 글자 */
+  font-weight: bold;
+  background-color: #e8f5e9; /* 부드러운 초록 배경 */
+}
+
+.skill-tab:not(.active) {
+  background-color: transparent;
 }
 
 /* 스킬 카테고리 스타일 */
