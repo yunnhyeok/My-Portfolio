@@ -227,6 +227,12 @@ body {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+
+/*스킬 타이틀*/
+.s-title {
+  display: flex;
+}
+
 /*스킬 옆 타이틀*/
 .skill-title {
   color: #00ff8c;
@@ -267,7 +273,6 @@ body {
 /* 스킬 카테고리 스타일 */
 .skill-content {
   flex: 1;
-  padding: 30px;
 }
 
 .skill-category {
@@ -291,9 +296,52 @@ body {
 }
 
 .skill-name {
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #555;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.skill-icon-wrapper {
+  width: 120px; /* 고정된 크기 */
+  height: 120px; /* 고정된 크기 */
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4caf50, #00bbff); /* 외곽 원 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.skill-icon-border {
+  width: 100px; /* 고정된 크기 */
+  height: 100px; /* 고정된 크기 */
+  border-radius: 50%;
+  background: #fff; /* 안쪽 원 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.skill-icon-border img {
+  width: 90%; /* 안쪽 원 크기에 상대적 조정 */
+  height: 90%;
+  border-radius: 50%;
+}
+
+/*Language 부분에서 h2크기의 타이틀 ex_ HTML , CSS , JS 등등*/
+.Language-Title {
+  color: #333;
+  transform: translateY(-40px) translateX(10px);
+}
+
+.skill-message {
+  font-size: 16px;
+  color: #666;
+  max-width: 400px; /* 글자의 길이에 상관없이 일정한 최대 너비 유지 */
+  line-height: 1.6;
+  transform: translateY(-80px) translateX(250px);
 }
 
 .skill-bar {
