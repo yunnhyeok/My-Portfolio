@@ -86,6 +86,7 @@ body {
 
 .ABOUT-ME {
   display: flex;
+  margin-top: 15em;
 }
 
 .ABOUT-ME-01 {
@@ -196,7 +197,7 @@ body {
 
 /* fullpage 스타일*/
 .section {
-  height: 100vh; /* 전체 높이 설정 */
+  height: 100%; /* 전체 높이 설정 */
 }
 
 /*AOS 스타일*/
@@ -243,7 +244,6 @@ body {
   max-width: 800px;
   margin: 0 auto;
   background: transparent;
-  overflow: hidden;
 }
 
 /* 세로 탭 스타일 */
@@ -398,4 +398,79 @@ body {
   font-family: "Paperlogy-8ExtraBold";
   font-style: normal;
   line-height: 1;
+}
+
+/*Project CSS*/
+.project-tabs {
+  margin: 20px;
+  padding: 10px;
+  background: #08a045;
+  border-radius: 10px;
+  display: inline-block;
+  text-align: left;
+}
+
+.project-tab {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.project-tab.active {
+  background-color: #555;
+  color: white;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card:hover h3 {
+  font-size: 1.5em;
+}
+
+.project-card p {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover p {
+  opacity: 0;
+}
+
+.project-card .detail-box {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: white;
+}
+
+.project-card:hover .detail-box {
+  display: block;
 }

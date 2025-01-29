@@ -20,3 +20,29 @@ function showCategory(categoryId) {
   // 선택된 카테고리만 표시
   document.getElementById(categoryId).classList.add("active");
 }
+
+/*project card JS*/
+document.addEventListener("DOMContentLoaded", () => {
+  const projectTabs = document.querySelectorAll(".project-tab");
+  const projects = document.querySelectorAll(".project-card");
+
+  projectTabs.forEach((projectTab) => {
+    projectTab.addEventListener("click", () => {
+      projectTabs.forEach((t) => t.classList.remove("active"));
+      projectTab.classList.add("active");
+
+      const category = projectTab.getAttribute("data-category");
+
+      projects.forEach((project) => {
+        if (
+          category === "all" ||
+          project.getAttribute("data-category") === category
+        ) {
+          project.style.display = "block";
+        } else {
+          project.style.display = "none";
+        }
+      });
+    });
+  });
+});
