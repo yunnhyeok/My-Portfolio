@@ -404,19 +404,20 @@ body {
 .project-tabs {
   margin: 20px;
   padding: 10px;
-  background: #08a045;
+  background: #585858;
   border-radius: 10px;
   display: inline-block;
   text-align: left;
 }
-
 .project-tab {
   padding: 10px 20px;
   margin: 5px;
   border: none;
   cursor: pointer;
-  background-color: #ddd;
+  background-color: #a0a0a0; /* 그레이 */
   border-radius: 5px;
+  color: white;
+  font-weight: bold;
 }
 
 .project-tab.active {
