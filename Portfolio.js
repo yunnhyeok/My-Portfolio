@@ -47,11 +47,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function openModal(title) {
-  document.getElementById("modal-title").innerText = title;
-  document.getElementById("modal").style.display = "flex";
+function openModal(imageSrc, title, description) {
+  const modal = document.getElementById("modal");
+  const modalImage = document.querySelector(".modal-image");
+  const modalTitle = document.querySelector(".modal-header h2");
+  const modalDescription = document.querySelector(".modal-header p");
+
+  if (modal && modalImage && modalTitle && modalDescription) {
+    modal.style.display = "flex"; // 모달 표시
+
+    // 이미지가 있을 경우만 설정
+    if (imageSrc) {
+      modalImage.style.backgroundImage = `url(${imageSrc})`;
+      modalImage.style.backgroundSize = "cover";
+    }
+
+    // 제목 및 설명 설정
+    modalTitle.innerText = title || "프로젝트 제목 없음";
+    modalDescription.innerText = description || "설명이 없습니다.";
+  } else {
+    console.error("모달 요소를 찾을 수 없습니다.");
+  }
 }
 
 function closeModal() {
-  document.getElementById("modal").style.display = "none";
+  const modal = document.getElementById("modal");
+  if (modal) {
+    modal.style.display = "none"; // 모달 숨김
+  }
 }

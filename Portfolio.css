@@ -497,18 +497,39 @@ body {
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
 }
-
 .modal-content {
   background: white;
-  padding: 30px;
   border-radius: 10px;
   position: relative;
   width: 1100px;
   text-align: center;
 }
 
+/* 모달 상단 스타일 추가 */
+.modal-header {
+  background: #2dc3ff; /* 하늘색 */
+  border-radius: 10px 10px 0 0;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+.modal-header h2 {
+  margin: 0;
+}
+.modal-header p {
+  margin: 5px 0 0;
+}
+.modal-image {
+  width: 100px;
+  height: 100px;
+  background: white;
+  margin: 10px auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .close-btn {
   position: absolute;
   top: -40px;
