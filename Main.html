@@ -487,7 +487,7 @@
         </div>
       </div>
       <!--섹션4-->
-      <div class="section" id="section4">
+      <div class="section4" id="section4">
         <div class="ABOUT-ME" data-aos="fade-up" data-aos-duration="1000">
           <h1 class="ABOUT-ME-project">03.</h1>
           <h1 class="ABOUT-ME-skill-title">Project</h1>
@@ -499,19 +499,32 @@
         </div>
         <div class="project-container">
           <div class="project-card" data-category="team">
-            <h3>팀 프로젝트 1</h3>
-            <p>설명...</p>
-            <div class="detail-box">자세히 보기</div>
+            <img src="project1.jpg" alt="팀 프로젝트 1" />
+            <!-- 프로젝트 이미지 추가 -->
+            <h2 class="project-title">Shopper</h2>
+            <p>
+              실시간 대화 기능으로 사용자 간 의견 전달을 용이하게 한 온라인
+              쇼핑몰
+            </p>
+            <div class="detail-box" onclick="openModal('Shopper')">
+              자세히 보기
+            </div>
           </div>
           <div class="project-card" data-category="single">
-            <h3>개인 프로젝트 1</h3>
+            <img src="project2.jpg" alt="개인 프로젝트 1" />
+            <!-- 프로젝트 이미지 추가 -->
+            <h2 class="project-title">개인 프로젝트 1</h2>
             <p>설명...</p>
-            <div class="detail-box">자세히 보기</div>
+            <div class="detail-box" onclick="openModal('개인 프로젝트 1')">
+              자세히 보기
+            </div>
           </div>
-          <div class="project-card" data-category="team">
-            <h3>팀 프로젝트 2</h3>
-            <p>설명...</p>
-            <div class="detail-box">자세히 보기</div>
+        </div>
+        <div class="modal" id="modal">
+          <div class="modal-content">
+            <div class="close-btn" onclick="closeModal()">×</div>
+            <h2 id="modal-title"></h2>
+            <p>프로젝트 상세 내용이 여기에 표시됩니다.</p>
           </div>
         </div>
       </div>
