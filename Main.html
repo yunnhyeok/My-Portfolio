@@ -498,41 +498,60 @@
           <button class="project-tab" data-category="single">Single</button>
         </div>
         <div class="project-container">
-          <div class="project-card" data-category="team">
+          <div class="project-card" data-modal-id="modal-shopper">
             <img
               src="https://i.postimg.cc/fWBV2LSk/shopper-main.png"
               alt="Shopper"
             />
-            <!-- 프로젝트 이미지 추가 -->
             <h2 class="project-title">Shopper</h2>
             <p>
               실시간 대화 기능으로 사용자 간 의견 전달을 용이하게 한 온라인
               쇼핑몰
             </p>
-            <div class="detail-box" onclick="openModal('Shopper')">
+            <div
+              class="detail-box"
+              onclick="openModal('modal-shopper', 'https://i.postimg.cc/fWBV2LSk/shopper-main.png', 'Shopper', '2023.12 ~ 2024.06 2인(프론트엔드 1명, 백엔드 1명)')"
+            >
               자세히 보기
             </div>
           </div>
-          <div class="project-card" data-category="single">
+
+          <div class="project-card" data-modal-id="modal-single1">
             <img
               src="https://i.postimg.cc/fWBV2LSk/shopper-main.png"
               alt="개인 프로젝트 1"
             />
-            <!-- 프로젝트 이미지 추가 -->
             <h2 class="project-title">개인 프로젝트 1</h2>
             <p>설명...</p>
-            <div class="detail-box" onclick="openModal('개인 프로젝트 1')">
+            <div
+              class="detail-box"
+              onclick="openModal('modal-single1', 'https://i.postimg.cc/fWBV2LSk/shopper-main.png', '개인 프로젝트 1', '설명이 없습니다.')"
+            >
               자세히 보기
             </div>
           </div>
         </div>
-        <div class="modal" id="modal">
+
+        <!-- 각각의 모달 추가 -->
+        <div class="modal" id="modal-shopper">
           <div class="modal-content">
-            <div class="close-btn" onclick="closeModal()">×</div>
+            <div class="close-btn" onclick="closeModal('modal-shopper')">×</div>
             <div class="modal-header">
-              <div class="modal-image">이미지</div>
+              <div class="modal-image"></div>
               <h2>Shopper - 실시간 소통의 온라인 쇼핑몰</h2>
               <p>2023.12 ~ 2024.06 2인(프론트엔드 1명, 백엔드 1명)</p>
+            </div>
+            <p>프로젝트 상세 내용이 여기에 표시됩니다.</p>
+          </div>
+        </div>
+
+        <div class="modal" id="modal-single1">
+          <div class="modal-content">
+            <div class="close-btn" onclick="closeModal('modal-single1')">×</div>
+            <div class="modal-header">
+              <div class="modal-image"></div>
+              <h2>개인 프로젝트 1</h2>
+              <p>설명이 없습니다.</p>
             </div>
             <p>프로젝트 상세 내용이 여기에 표시됩니다.</p>
           </div>

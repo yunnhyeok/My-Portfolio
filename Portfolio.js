@@ -47,32 +47,31 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function openModal(imageSrc, title, description) {
-  const modal = document.getElementById("modal");
-  const modalImage = document.querySelector(".modal-image");
-  const modalTitle = document.querySelector(".modal-header h2");
-  const modalDescription = document.querySelector(".modal-header p");
-
-  if (modal && modalImage && modalTitle && modalDescription) {
-    modal.style.display = "flex"; // 모달 표시
-
-    // 이미지가 있을 경우만 설정
-    if (imageSrc) {
-      modalImage.style.backgroundImage = `url(${imageSrc})`;
-      modalImage.style.backgroundSize = "cover";
-    }
-
-    // 제목 및 설명 설정
-    modalTitle.innerText = title || "프로젝트 제목 없음";
-    modalDescription.innerText = description || "설명이 없습니다.";
-  } else {
-    console.error("모달 요소를 찾을 수 없습니다.");
+function openModal(modalId, imageSrc, title, description) {
+  const modal = document.getElementById(modalId);
+  if (!modal) {
+    console.error(`모달 ID(${modalId})를 찾을 수 없습니다.`);
+    return;
   }
+
+  const modalImage = modal.querySelector(".modal-image");
+  const modalTitle = modal.querySelector(".modal-header h2");
+  const modalDescription = modal.querySelector(".modal-header p");
+
+  modal.style.display = "flex"; // 모달 표시
+
+  if (imageSrc) {
+    modalImage.style.backgroundImage = `url(${imageSrc})`;
+    modalImage.style.backgroundSize = "cover";
+  }
+
+  modalTitle.innerText = title || "프로젝트 제목 없음";
+  modalDescription.innerText = description || "설명이 없습니다.";
 }
 
-function closeModal() {
-  const modal = document.getElementById("modal");
+function closeModal(modalId) {
+  const modal = document.getElementById(modalId);
   if (modal) {
-    modal.style.display = "none"; // 모달 숨김
+    modal.style.display = "none"; // 해당 모달 숨김
   }
 }
