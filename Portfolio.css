@@ -505,7 +505,6 @@ body {
   width: 80%; /* 너비를 80%로 설정 */
   max-height: 90%; /* 최대 높이를 화면의 90%로 설정 */
   overflow-y: auto; /* 내용이 넘칠 경우 세로 스크롤바가 생기게 함 */
-  text-align: center;
 }
 
 /* 모달 상단 스타일 추가 */
@@ -542,8 +541,8 @@ body {
   position: absolute;
   top: 0;
   right: 0;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: rgb(55, 55, 55);
   color: white;
@@ -557,7 +556,7 @@ body {
 
 .close-btn::before {
   content: "×"; /* x 문자 */
-  font-size: 24px; /* x의 크기 */
+  font-size: 30px; /* x의 크기 */
 }
 
 /*shopper프로젝트 설명*/
@@ -570,10 +569,28 @@ body {
 .shopper-explanation::after {
   content: "";
   display: block;
-  width: 50%;
-  height: 2px;
+  width: 60%;
+  height: 0.5px;
   position: absolute;
-  left: 25%;
+  left: 20%;
   background-color: #e0e0e0; /* 회색 구분선 */
   margin-top: 3em; /* 텍스트와 구분선 사이 여백 */
+}
+
+/*shopper 주요 기능 설명 타이틀*/
+.function-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  margin-left: 20%;
+}
+
+.shopper-function-title {
+  margin-left: 18%;
+  gap: 0.25rem;
+}
+
+.shopper-function {
+  font-size: 1.1rem;
 }
