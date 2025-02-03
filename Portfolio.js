@@ -75,3 +75,9 @@ function closeModal(modalId) {
     modal.style.display = "none"; // 해당 모달 숨김
   }
 }
+
+/* 작업기여도 박스 */
+function toggleIdea() {
+  const ideaList = document.getElementById("ideaList");
+  ideaList.style.display = ideaList.style.display === "none" ? "block" : "none";
+}

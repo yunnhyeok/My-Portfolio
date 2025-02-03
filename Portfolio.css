@@ -594,3 +594,29 @@ body {
 .shopper-function {
   font-size: 1.1rem;
 }
+
+/* 작업 기여도를 묻는 박스 */
+.idea-box {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: #dedede;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+}
+
+.idea-list {
+  list-style-type: none;
+  padding: 10px;
+  margin-top: 10px;
+  display: none; /* 초기에는 숨김 */
+  background-color: #e9ecef;
+  border-radius: 5px;
+}
+
+.idea-list li {
+  padding: 8px;
+  font-size: 14px;
+}
