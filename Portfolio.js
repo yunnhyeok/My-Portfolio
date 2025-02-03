@@ -77,7 +77,8 @@ function closeModal(modalId) {
 }
 
 /* 작업기여도 박스 */
-function toggleIdea() {
-  const ideaList = document.getElementById("ideaList");
-  ideaList.style.display = ideaList.style.display === "none" ? "block" : "none";
+// 리스트 토글 (여러 개 추가 가능)
+function toggleList(listId) {
+  const list = document.getElementById(listId);
+  list.style.display = list.style.display === "none" ? "block" : "none";
 }
