@@ -82,3 +82,26 @@ function toggleList(listId) {
   const list = document.getElementById(listId);
   list.style.display = list.style.display === "none" ? "block" : "none";
 }
+
+/* 프로젝트 이미지를 띄우는 JS 함수 */
+// 팝업을 띄우는 함수
+function showPopup(imgElement) {
+  const popupContainer = document.getElementById("popup-container");
+  const popupImage = document.getElementById("popup-image");
+
+  popupImage.src = imgElement.src;
+  popupContainer.style.display = "flex"; // 팝업을 표시
+}
+
+// 팝업을 닫는 함수
+function hidePopup(event) {
+  const popupContainer = document.getElementById("popup-container");
+
+  // 'popup-container'나 'popup-close'를 클릭한 경우에만 팝업을 숨깁니다.
+  if (
+    event.target === popupContainer ||
+    event.target === document.querySelector(".popup-close")
+  ) {
+    popupContainer.style.display = "none"; // 팝업을 숨깁니다.
+  }
+}

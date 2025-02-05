@@ -548,7 +548,9 @@
         <!-- 각각의 모달 추가 -->
         <div class="modal" id="modal-shopper">
           <div class="modal-content">
-            <div class="close-btn" onclick="closeModal('modal-shopper')"></div>
+            <span class="close-btn" onclick="closeModal('modal-shopper')"
+              >×</span
+            >
             <div class="modal-header">
               <h2 class="modal-project-title">
                 Shopper - 실시간 소통의 온라인 쇼핑몰
@@ -697,11 +699,54 @@
             <!--프로젝트 화면-->
             <h3 class="function-title">💻 작업 화면</h3>
             <ul class="shopper-function-title">
-              <li class="shopper-function">
+              <p class="shopper-image-li">
                 이미지 클릭 시 크게 볼 수 있습니다. (작업화면이 현재와 다를 수
-                있습니다.) * 저작권 이슈가 있는 경우 첨부하지 않았습니다.
-              </li>
+                있습니다.) <br />* 저작권 이슈가 있는 경우 첨부하지 않았습니다.
+              </p>
             </ul>
+            <div class="gallery">
+              <img
+                src="https://i.postimg.cc/kXHgSHhr/image.png"
+                alt="메인페이지"
+                onclick="showPopup(this)"
+              />
+              <img
+                src="https://i.postimg.cc/cCHdg7R4/image.png"
+                alt="상품페이지"
+                onclick="showPopup(this)"
+              />
+              <img
+                src="https://i.postimg.cc/Gh4cbQ3X/image.png"
+                alt="마이페이지"
+                onclick="showPopup(this)"
+              />
+              <img
+                src="https://i.postimg.cc/RZf4HZHf/image.png"
+                alt="채팅기능"
+                onclick="showPopup(this)"
+              />
+              <img
+                src="https://i.postimg.cc/q7T0XHsF/image.png"
+                alt="관리자채팅"
+                onclick="showPopup(this)"
+              />
+              <img
+                src="https://i.postimg.cc/63HXX7ks/image.png"
+                alt="회원가입"
+                onclick="showPopup(this)"
+              />
+            </div>
+            <!-- 팝업 컨테이너 (기본적으로 숨김) -->
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              id="popup-container"
+              class="popup-container"
+              onclick="hidePopup(event)"
+            >
+              <span class="popup-close" onclick="hidePopup(event)">×</span>
+              <img id="popup-image" src="" alt="Expanded Image" />
+            </div>
           </div>
         </div>
 
