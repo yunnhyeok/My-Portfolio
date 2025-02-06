@@ -632,12 +632,11 @@ body {
 
 /* 갤러리 컨테이너 */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-  padding: 20px;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3열 */
+  max-width: 750px; /* 최대 너비 제한 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 10px;
 }
 
 /* 기본 이미지 스타일 */
@@ -647,8 +646,23 @@ body {
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
-
   border: 1px solid #e0e0e0;
+}
+
+.img-p {
+  text-align: center;
+}
+
+.img-p img {
+  width: 100%;
+  max-width: 220px; /* 이미지 크기 조정 */
+  border-radius: 10px;
+}
+
+.image-caption {
+  color: #828282;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 /* 팝업 컨테이너 스타일 */
@@ -684,4 +698,21 @@ body {
 
 .popup-close:hover {
   color: #ff4d4d;
+}
+
+/* 개인 포트폴리오 제작 */
+.modal-PortPoilo-header {
+  background: radial-gradient(rgb(63, 62, 62) 0%, rgba(152, 155, 156, 0.7) 70%);
+  color: white;
+  text-align: center;
+  position: relative;
+  padding: 20px 20px 60px; /* 아래쪽 패딩 증가 */
+}
+
+.modal-PortPoilo-header h2 {
+  margin: 0;
+}
+
+.modal-PortPoilo-header p {
+  margin: 5px 0 0;
 }
