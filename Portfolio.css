@@ -653,6 +653,10 @@ body {
   text-align: center;
 }
 
+.img-p img:hover {
+  filter: brightness(0.85); /* 연한 회색 효과 */
+}
+
 .img-p img {
   width: 100%;
   max-width: 220px; /* 이미지 크기 조정 */
