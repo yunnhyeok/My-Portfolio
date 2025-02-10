@@ -85,23 +85,59 @@ function toggleList(listId) {
 
 /* 프로젝트 이미지를 띄우는 JS 함수 */
 // 팝업을 띄우는 함수
-function showPopup(imgElement) {
-  const popupContainer = document.getElementById("popup-container");
-  const popupImage = document.getElementById("popup-image");
+document.addEventListener("DOMContentLoaded", function () {
+  function showPopup(imgElement) {
+    // 현재 클릭된 이미지가 속한 모달 찾기
+    const parentModal = imgElement.closest(".modal");
 
-  popupImage.src = imgElement.src;
-  popupContainer.style.display = "flex"; // 팝업을 표시
-}
+    if (!parentModal) {
+      console.error("이미지가 속한 모달을 찾을 수 없습니다.");
+      return;
+    }
 
-// 팝업을 닫는 함수
-function hidePopup(event) {
-  const popupContainer = document.getElementById("popup-container");
+    // 해당 모달의 팝업 컨테이너 및 이미지 요소 찾기
+    const popupContainer = parentModal.querySelector(".popup-container");
+    const popupImage = parentModal.querySelector(".popup-image");
 
-  // 'popup-container'나 'popup-close'를 클릭한 경우에만 팝업을 숨깁니다.
-  if (
-    event.target === popupContainer ||
-    event.target === document.querySelector(".popup-close")
-  ) {
-    popupContainer.style.display = "none"; // 팝업을 숨깁니다.
+    if (!popupContainer || !popupImage) {
+      console.error("팝업 요소를 찾을 수 없습니다.");
+      return;
+    }
+
+    // 클릭한 이미지의 src 가져오기
+    popupImage.src = imgElement.src;
+
+    // 해당 모달 내에서 팝업 표시
+    popupContainer.style.display = "flex";
   }
-}
+
+  function hidePopup(event) {
+    // 이벤트가 발생한 요소가 포함된 모달 찾기
+    const parentModal = event.target.closest(".modal");
+
+    if (!parentModal) {
+      console.error("팝업 컨테이너가 속한 모달을 찾을 수 없습니다.");
+      return;
+    }
+
+    // 해당 모달 내의 팝업 컨테이너 찾기
+    const popupContainer = parentModal.querySelector(".popup-container");
+
+    if (!popupContainer) {
+      console.error("팝업 컨테이너가 존재하지 않습니다.");
+      return;
+    }
+
+    // 팝업 닫기 (컨테이너 클릭 또는 닫기 버튼 클릭 시)
+    if (
+      event.target.classList.contains("popup-container") ||
+      event.target.classList.contains("popup-close")
+    ) {
+      popupContainer.style.display = "none";
+    }
+  }
+
+  // 전역 범위에서 함수 사용 가능하도록 등록
+  window.showPopup = showPopup;
+  window.hidePopup = hidePopup;
+});
