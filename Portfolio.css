@@ -545,7 +545,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  z-index: 1001;
+  transition: opacity 0.3s ease;
 }
 
 /* 원형 버튼 */
@@ -716,8 +716,8 @@ img.close-icon {
 /* 닫기 버튼 스타일 */
 .popup-close {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 60px;
+  right: 110px;
   font-size: 2rem;
   color: white;
   cursor: pointer;
